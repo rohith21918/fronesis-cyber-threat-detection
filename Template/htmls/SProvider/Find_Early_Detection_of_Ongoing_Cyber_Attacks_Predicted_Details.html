@@ -1,0 +1,106 @@
+{% extends 'SProvider/design1.html' %}
+{% block researchblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 1104px;
+    height: 442px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style7 {color: #FFFF00}
+        .style10 {color: #FFFF00; font-weight: bold; }
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p align="center" class="text-uppercase pull-center style1">View All Ongoing Cyber Attacks Prediction Details !!! </p>
+                            <hr>
+                            <div class="tweettext">
+                                 <table border="5" bordercolor="#FF00FF">
+
+                       <tr>
+
+<td bgcolor="#FF0000"><span class="style7"><strong>cve_id</strong></span></td>
+<td bgcolor="#FF0000"><span class="style7"><strong>vendor_project</strong></span></td>
+<td bgcolor="#FF0000"><span class="style7"><strong>product</strong></span></td>
+<td bgcolor="#FF0000"><span class="style7"><strong>threat_name</strong></span></td>
+<td bgcolor="#FF0000"><span class="style7"><strong>date_added</strong></span></td>
+<td bgcolor="#FF0000"><span class="style7"><strong>short_description</strong></span></td>
+<td bgcolor="#FF0000"><span class="style7"><strong>required_action</strong></span></td>
+<td bgcolor="#FF0000"><span class="style7"><strong>due_date</strong></span></td>
+<td bgcolor="#FF0000"><span class="style7"><strong>pub_date</strong></span></td>
+<td bgcolor="#FF0000"><span class="style7"><strong>cvss</strong></span></td>
+<td bgcolor="#FF0000"><span class="style10">cwe</span></td>
+<td bgcolor="#FF0000"><span class="style10">Type</span></td>
+<td bgcolor="#FF0000"><span class="style10">complexity</span></td>
+<td bgcolor="#FF0000"><span class="style10">Prediction</span></td>
+                      </tr>
+                            {% for object in objs %}
+                      <tr>
+
+
+                         <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.cve_id}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.vendor_project}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.product}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.threat_name}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.date_added}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center"><textarea cols="20" rows="6">{{object.short_description}}</textarea></div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.required_action}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.due_date}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.pub_date}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.cvss}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.cwe}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Type}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.complexity}}</div></td>
+                          <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Prediction}}</div></td>
+                        </tr>
+
+                                        {% endfor %}
+                      </table>
+
+
+                            </div>
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>

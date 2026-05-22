@@ -1,0 +1,41 @@
+Fronesis Digital Forensics-Based Early Detection of Ongoing Cyber-Attacks
+
+
+Cyber-attack detection, cyber kill chain, cybersecurity, digital artifacts, MITRE ATT&CK,
+ontology, rule-based reasoning.
+
+
+Fronesis_Digital_Forensics
+
+
+fronesis_digital_forensics
+
+
+
+
+
+
+
+detection_of_ongoing_cyber_attacks
+
+
+
+cve_id	
+vendor_project	
+product	
+threat_name	
+date_added	
+short_description	
+required_action	
+due_date	
+pub_date	
+cvss	
+cwe	
+Type	
+complexity	
+severity
+Prediction
+
+
+ 
+

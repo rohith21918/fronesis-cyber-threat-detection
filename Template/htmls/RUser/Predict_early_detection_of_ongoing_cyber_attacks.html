@@ -1,0 +1,136 @@
+{% extends 'RUser/design.html' %}
+{% block userblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 1104px;
+    height: 442px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style6 {
+	color: #FF0000;
+	font-size: 24px;
+}
+        .style7 {color: #FFFF00}
+        .style9 {color: #FFFF00; font-weight: bold; }
+        .style10 {
+	color: #000000;
+	font-weight: bold;
+}
+        .style11 {color: #FFFF00; font-weight: bold; font-size: 24px; }
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+
+                   <form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p class="text-uppercase pull-center style1">PREDICT CYBER THREAT TYPE !!! </p>
+                            <hr>
+
+                                {% csrf_token %}
+                                <table width="941" align="center">
+                                  <tr>
+                                    <td height="44" colspan="4" bgcolor="#FF0000"><div align="center" class="style11">Feed Datasets Details Here !!! </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td width="289" height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style7">Enter cve_id	</span></strong></div></td>
+                                    <td width="229"><input type="text" name="cve_id"></td>
+                                    <td width="237" bgcolor="#FF0000"><div align="center"><span class="style9">Enter vendor_project	</span></div></td>
+                                    <td width="347"><input type="text" name="vendor_project"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style7">Enter product</span></strong></div></td>
+                                    <td><input type="text" name="product"></td>
+                                    <td bgcolor="#FF0000"><div align="center"><span class="style9">Enter threat_name</span></div></td>
+                                    <td><input type="text" name="threat_name"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style7">Enter date_added</span></strong></div></td>
+                                    <td><input type="text" name="date_added"></td>
+                                    <td bgcolor="#FF0000"><div align="center"><span class="style9">Enter short_description</span></div></td>
+                                    <td><input type="text" name="short_description"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style7">Enter required_action	</span></strong></div></td>
+                                    <td><input type="text" name="required_action"></td>
+                                    <td bgcolor="#FF0000"><div align="center"><span class="style9">Enter due_date</span></div></td>
+                                    <td><input type="text" name="due_date"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style7">Enter pub_date</span></strong></div></td>
+                                    <td><input type="text" name="pub_date"></td>
+                                    <td bgcolor="#FF0000"><div align="center"><span class="style9">Enter cvss</span></div></td>
+                                    <td><input type="text" name="cvss"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style7">Enter cwe</span></strong></div></td>
+                                    <td><input type="text" name="cwe"></td>
+                                    <td bgcolor="#FF0000"><div align="center"><span class="style9">Enter Type</span></div></td>
+                                    <td><input type="text" name="Type"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style7">Enter complexity</span></strong></div></td>
+                                    <td><input type="text" name="complexity"></td>
+                                    <td bgcolor="#FFFFFF">&nbsp;</td>
+                                    <td><input name="submit" type="submit" class="style1" value="Predict"></td>
+                                  </tr>
+                                </table>
+					 </fieldset>
+				  </form>
+
+
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+
+                            <hr>
+                            <div >
+							  <div align="center" class="style6"><span class="style10">CYBER THREAT  PREDICTION TYPE </span> <strong>::{{objs}} </strong></div>
+                            </div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>
